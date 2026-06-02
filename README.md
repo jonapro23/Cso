@@ -152,4 +152,124 @@ GitHub: https://github.com/jonapro23
 
 Uso educacional. Livre para estudo e melhorias 🚀
 
----
+------------------------------------------------------------
+
+🖥️ CSo - Operating System Simulator in C
+
+A simple operating system simulator built in pure C, focusing on process management, CPU scheduling, synchronization, and deadlock detection.
+
+📌 About the Project
+
+CSo (C System OS) is an educational simulator that demonstrates core operating system concepts in practice:
+
+Process management (PCB)
+CPU scheduling (Round Robin)
+Resource control using semaphores
+Deadlock detection
+Simulated RAM
+Interactive shell (terminal-based)
+⚙️ Features
+Process creation and termination
+Process states:
+READY
+RUNNING
+BLOCKED
+SEMAPHORE_BLOCKED
+TERMINATED
+Round Robin scheduling
+Resource management:
+Printer
+Disk
+Resource waiting queues
+Automatic deadlock detection
+Interactive shell interface
+🛠️ Technologies
+C Programming Language
+GCC (GNU Compiler)
+Linux / WSL
+🚀 How to Run
+1. Clone the repository
+git clone https://github.com/jonapro23/Cso.git
+cd Cso
+2. Compile the program
+gcc -o init init.c
+3. Run
+./init
+💻 Available Commands
+Command	Description
+spawn <name>	Create a new process
+ps	List processes
+cpu	Execute one CPU cycle
+kill <pid>	Force terminate a process
+block <pid>	Block a process (I/O simulation)
+unblock <pid>	Unblock a process
+lock <pid> <resource>	Acquire a resource
+unlock <pid> <resource>	Release a resource
+clear	Clear the screen
+help	Show commands
+exit	Shutdown system
+🔄 Scheduling
+
+The system uses:
+
+👉 Round Robin Algorithm
+
+Each process gets CPU time
+If it doesn't finish, it goes to the end of the queue
+Simulates real preemptive scheduling
+🔒 Resources (Semaphores)
+
+Available resources:
+
+Printer
+Disk
+
+Each resource:
+
+Can be used by only one process at a time
+Has a waiting queue
+Can lead to deadlock
+⚠️ Deadlock Detection
+
+The system automatically detects deadlocks using a wait-for graph approach.
+
+Example:
+
+P1 → waiting for P2
+P2 → waiting for P1
+
+Output:
+
+*** DEADLOCK DETECTED! ***
+🧠 Concepts Applied
+Operating Systems
+Process Scheduling
+Concurrency
+Synchronization
+Data Structures
+Graph Theory (cycle detection)
+🎯 Purpose
+
+This project was developed for educational purposes to:
+
+Understand how operating systems work internally
+Practice C programming
+Simulate real-world problems like deadlock
+👨‍💻 Author
+
+Jonathan Freitas
+GitHub: https://github.com/jonapro23
+
+📄 License
+
+Educational use.
+Feel free to study, modify, and improve 🚀
+
+⭐ Contributions
+
+Contributions are welcome!
+
+Fork the repository
+Create a new branch
+Make your changes
+Submit a Pull Request
